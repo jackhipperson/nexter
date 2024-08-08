@@ -11,3 +11,46 @@ body {
   font-family: "Nunito", sans-serif;
   color: #6D5D4B;
   font-weight: 300; }
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vh repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [screen-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [screen-end] minmax(6rem, 1fr) [full-end]; }
+
+.sidebar {
+  background-color: #c69963;
+  grid-row: 1 / -1; }
+
+.header {
+  background-color: #54483A;
+  grid-column: full-start / col-end 6; }
+
+.realtors {
+  grid-column: col-start 7 / full-end; }
+
+.features {
+  grid-column: screen-start / screen-end;
+  margin: 20rem 0;
+  font-size: 1.2rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 6rem; }
+
+.story__pictures {
+  grid-column: full-start / col-end 4;
+  background-color: #aaa; }
+
+.story__content {
+  grid-column: col-start 5 / full-end; }
+
+.homes {
+  background-color: #B28451;
+  grid-column: col-start 1 / col-end 8; }
+
+.gallery {
+  background-color: #54483A;
+  grid-column: full-start / full-end; }
+
+.footer {
+  background-color: #6D5D4B;
+  grid-column: full-start / full-end; }
