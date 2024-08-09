@@ -3,31 +3,80 @@
 
     margin: 15rem 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-gap: 6rem
 }
 
 .home {
     background-color: $color-grey-light-1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
 
     &__img {
-
+        grid-column: 1 / -1;
+        grid-row: 1;
+        width: 100%;
     }
 
     &__icon {
-
+        width: 2.75rem;
+        height: 2.75rem;
+        fill: $color-primary;
+        grid-column: 2;
+        grid-row: 1;
+        justify-self: end;
+        margin: 1rem 1.5rem;
+        z-index: 10;
     }
 
     &__tagline {
+        grid-column: 1 / -1;
+        grid-row: 1;
+        justify-self: center;
+        align-self: flex-end;
+        transform: translateY(50%);
+
+        width: 80%;
+        font-family: $font-display;
+        font-weight: 400;
+        background-color: $color-secondary;
+        color: $color-grey-light-1;
+        font-size: 1.6rem;
+        text-align: center;
+        padding: 1.25rem;        
 
     }
 
-    &__location, &__rooms, &__size, &__cost {
+    &__location,
+    &__rooms,
+    &__size,
+    &__cost {
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: $color-primary;
+            margin-right: .5rem;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: $color-grey-dark-1;
+        }
+    }
+
+    &__location,
+    &__rooms {
+        margin-top: 2rem;
     }
 
     &__btn {
-        
+        grid-column: 1/-1;
     }
 
 
