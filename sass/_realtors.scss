@@ -3,6 +3,11 @@
     background-color: $color-secondary;
     align-content: center;
     text-align: center;
+    padding: 2rem;
+
+    @media only screen and (max-width: $screen-md) {
+        grid-column: full-start / full-end;
+    }
 
     &__list {
         padding: 2rem;
@@ -11,7 +16,15 @@
         justify-content: center;
         align-items: center;
         grid-column-gap: 2rem;
-        grid-row-gap:5vh;
+        grid-row-gap: 5vh;
+
+        @media only screen and (max-width: $screen-md) {
+            grid-template-columns: repeat(6, max-content);
+        }
+
+        @media only screen and (max-width: $screen-xs) {
+            grid-template-columns: repeat(2, max-content);
+        }
     }
 
     &__img {

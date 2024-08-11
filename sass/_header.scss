@@ -13,6 +13,10 @@
 
     justify-content: center;
 
+    @media only screen and (max-width: $screen-md) {
+        grid-column: full-start / full-end;
+    }
+
     &__logo {
         height: 2.5rem;
         justify-self: center;
@@ -45,12 +49,13 @@
 
     &__asseenon-logos {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+        grid-template-columns: repeat(4, 1fr);
         grid-gap: 1rem;
         justify-items: center;
     
         img {
-            height: 2.5rem;
+            max-height: 2.5rem;
+            max-width: 100%;
             filter: brightness(85%);
         }
     }
